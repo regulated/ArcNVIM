@@ -12,6 +12,7 @@ ts.setup {
   },
   ensure_installed = {
 		"javascript",
+		"typescript",
     "json",
     "css",
     "html",

@@ -25,6 +25,8 @@ packer.startup(function(use)
 	end}
 	use { 'lunarvim/synthwave84.nvim' }
 
+	-- nvim-treesitter
+	-- after updates, run :TSUpdate to sync it or sql will break
 	use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,

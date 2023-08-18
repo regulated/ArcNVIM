@@ -28,3 +28,9 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 -- Move highlighted text with JK in V
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Find and replace shortcuts to change multiline list to one line csv '', and to reverse csv
+keymap.set('n', '<leader>,', ":%s/\\(.*\\)\\n/'\\1', /g<CR>")
+keymap.set('n', '<leader>/', ":%s/ /\\r/g<CR>:%s/'\\(.*\\)',/\\1/g<CR>")
+-- Remove blank lines
+keymap.set('n', '<leader><leader>', ":%s/^$\\n//g<CR>")
