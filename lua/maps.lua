@@ -29,8 +29,10 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Find and replace shortcuts to change multiline list to one line csv '', and to reverse csv
+-- Find and replace shortcuts to change multiline list to one line quoted csv '', and to reverse csv
 keymap.set('n', '<leader>,', ":%s/\\(.*\\)\\n/'\\1', /g<CR>")
 keymap.set('n', '<leader>/', ":%s/ /\\r/g<CR>:%s/'\\(.*\\)',/\\1/g<CR>")
 -- Remove blank lines
-keymap.set('n', '<leader><leader>', ":%s/^$\\n//g<CR>")
+keymap.set('n', '<leader><leader>', ":%s/^$\\n//g<CR>:%s/\\n^$//g<CR>")
+-- Delete all text and enter insert mode
+keymap.set('n', '<leader><BS>', "gg<S-v>Gc")
