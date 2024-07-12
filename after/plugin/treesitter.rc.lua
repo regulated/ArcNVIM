@@ -24,9 +24,10 @@ ts.setup {
 		"query",
 		"lua"
 	},
-	autotag = {
-		enable = true,
-	}
+	-- deprecated for ts-autotag
+	-- autotag = {
+	-- 	enable = true,
+	-- }
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
